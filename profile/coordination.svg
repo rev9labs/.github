@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" width="880" height="240" role="img" aria-label="Autonomous AI teams coordinating. The direction is human.">
+  <style>
+    .tick { animation: tick 8s ease-in-out infinite; }
+    @keyframes tick {
+      0%, 88%, 100% { stroke: #45545C; }
+      92% { stroke: #C9D6D0; }
+    }
+    .ring { animation: ring 8s ease-out infinite; transform-origin: 120px 120px; }
+    @keyframes ring {
+      0% { opacity: 0.45; transform: scale(0.3); }
+      55% { opacity: 0; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pulse, .ring { display: none; }
+      .tick { animation: none; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="879" height="239" rx="12" fill="#04070C" stroke="#131C26"/>
+
+  <!-- the seams (still) -->
+  <g fill="none" stroke="#111B24" stroke-width="1.2">
+    <path d="M120,120 Q210,80 300,58 Q385,38 470,36 Q555,42 640,64 Q730,84 800,120"/>
+    <path d="M120,120 Q210,160 300,178 Q385,200 470,204 Q555,198 640,176 Q730,156 800,120"/>
+    <path d="M800,120 Q635,132 470,120 Q295,128 120,120"/>
+    <path d="M300,58 L470,120"/>
+    <path d="M300,178 L470,120"/>
+    <path d="M470,120 L640,64"/>
+    <path d="M470,120 L640,176"/>
+  </g>
+
+  <!-- the teams (still, unnamed) -->
+  <g fill="#0A1118" stroke="#45545C" stroke-width="1.5">
+    <circle class="tick" style="animation-delay:1.6s" cx="300" cy="58"  r="5.5"/>
+    <circle class="tick" style="animation-delay:4.4s" cx="300" cy="178" r="5.5"/>
+    <circle class="tick" style="animation-delay:3.1s" cx="470" cy="36"  r="5.5"/>
+    <circle class="tick" style="animation-delay:6.5s" cx="470" cy="120" r="5.5"/>
+    <circle class="tick" style="animation-delay:6.9s" cx="470" cy="204" r="5.5"/>
+    <circle class="tick" style="animation-delay:4.6s" cx="640" cy="64"  r="5.5"/>
+    <circle class="tick" style="animation-delay:8.4s" cx="640" cy="176" r="5.5"/>
+    <circle class="tick" style="animation-delay:6.0s" cx="800" cy="120" r="5.5"/>
+  </g>
+
+  <!-- the human (bone; the direction) -->
+  <circle class="ring" cx="120" cy="120" r="24" fill="none" stroke="#E9F0EC" stroke-width="1"/>
+  <circle cx="120" cy="120" r="7" fill="#04070C" stroke="#E9F0EC" stroke-width="1.8"/>
+
+  <!-- the work (signal green; the only thing that moves) -->
+  <g class="pulse">
+    <circle r="3" fill="#34E5A0">
+      <animateMotion dur="8s" repeatCount="indefinite"
+        path="M120,120 Q210,80 300,58 Q385,38 470,36 Q555,42 640,64 Q730,84 800,120"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.06;0.5;0.94;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3" fill="#34E5A0">
+      <animateMotion dur="9.5s" begin="2.5s" repeatCount="indefinite"
+        path="M120,120 Q210,160 300,178 Q385,200 470,204 Q555,198 640,176 Q730,156 800,120"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.06;0.5;0.94;1" dur="9.5s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3" fill="#34E5A0">
+      <animateMotion dur="7s" begin="5s" repeatCount="indefinite"
+        path="M800,120 Q635,132 470,120 Q295,128 120,120"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.08;0.5;0.92;1" dur="7s" begin="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
