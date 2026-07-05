@@ -1,6 +1,6 @@
 # Rev9 Labs
 
-<img src="./coordination.svg" width="100%" alt="Autonomous AI teams coordinating. The direction is human." />
+<img src="./swarm.gif" width="100%" alt="A swarm of agents writes 'rev9 labs', solidifies into type, then writes code." />
 
 Rev9 Labs makes autonomous companies — starting with itself.
 
